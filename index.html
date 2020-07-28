@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        html, body{
+            margin: 0px;padding: 0px;
+        }
+        *{
+            box-sizing: border-box;font-size: 15px;font-weight: normal;color: white;
+        }
+        .main{
+            width: 100%;height: 100vh;background-image: url(1.jpg);background-size: cover;background-repeat: no-repeat;
+        }
+        .form{
+            width: 30%;background-color: rgba(60, 59, 148, 0.753);border-radius: 20px;padding: 50px;padding-bottom: 80px;position: absolute;top: 10%;left: 8%;
+        }
+        .form ::-webkit-input-placeholder{
+            color: rgba(255, 255, 255, 0.548);
+        }
+        @media all and (max-width: 1210px){
+            .form{
+                width: 45%;
+            }
+        }
+        @media all and (max-width: 950px){
+            .form{
+                width: 55%;
+            }
+        }
+        @media all and (max-width: 770px){
+            .form{
+                width: 65%;
+            }
+        }
+        @media all and (max-width: 660px){
+            .form{
+                width: 75%;
+            }
+        }
+        @media all and (max-width: 450px){
+            .form{
+                width: 85%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="form">
+            <form action="submit">
+                <h1 style="color: white; font-family: 'Marck Script', cursive;">Form Design</h1>
+                <br>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <label for="form-control">First Name</label>
+                            <input type="text" class="form-control" placeholder="First name" minlength="2" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
+                        </div>
+                        <div class="col">
+                            <label for="form-control">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Last name" minlength="2" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Age</label>
+                    <input type="number" min="18" max="120" class="form-control" id="formGroupExampleInput" placeholder="Enter your Age here" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email here" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label>Choose Music File</label>
+                    <input type="file" id="file" multiple accept="audio/*" style="width: 100%; border: none; border-bottom: 1px solid white;">
+                </div>
+                <br><br>
+                <button type="submit" class="btn btn-primary" style="width: 50%; left: 25%; position: absolute; color: white; background-color: rgba(46, 46, 46, 0.918); border: none;">Submit</button>
+            </form>
+        </div>
+    </div>
+        
+    <script>
+        var  uploadFile = document.getElementById("file");
+        uploadFile.onchange = function(){
+            if(this.files[0].size > 10485760){
+                alert("File has size greater than 10MB, upload size is limited to 10MB");
+                this.value = "";
+            };
+        };
+    </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

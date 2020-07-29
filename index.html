@@ -53,33 +53,33 @@
     
     <div class="main">
         <div class="form">
-            <form action="submit">
+            <form method="POST" action="connect.php">
                 <h1 style="color: white; font-family: 'Marck Script', cursive;">Form Design</h1>
                 <br>
                 <div class="form-group">
                     <div class="row">
                         <div class="col">
                             <label for="form-control">First Name</label>
-                            <input type="text" class="form-control" placeholder="First name" minlength="2" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
+                            <input type="text" name="fname" class="form-control" placeholder="First name" minlength="2" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
                         </div>
                         <div class="col">
                             <label for="form-control">Last Name</label>
-                            <input type="text" class="form-control" placeholder="Last name" minlength="2" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
+                            <input type="text" name="lname" class="form-control" placeholder="Last name" minlength="2" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Age</label>
-                    <input type="number" min="18" max="120" class="form-control" id="formGroupExampleInput" placeholder="Enter your Age here" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
+                    <input type="number" name="age" min="18" max="120" class="form-control" id="formGroupExampleInput" placeholder="Enter your Age here" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email here" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email here" required="" style="background: none; border: none; border-bottom: 1px solid white; color: white;">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                     <label>Choose Music File</label>
-                    <input type="file" id="file" multiple accept="audio/*" style="width: 100%; border: none; border-bottom: 1px solid white;">
+                    <input type="file" id="song" multiple accept="audio/*" style="width: 100%; border: none; border-bottom: 1px solid white;">
                 </div>
                 <br><br>
                 <button type="submit" class="btn btn-primary" style="width: 50%; left: 25%; position: absolute; color: white; background-color: rgba(46, 46, 46, 0.918); border: none;">Submit</button>
